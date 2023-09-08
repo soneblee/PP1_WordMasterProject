@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class WordManager {
     Scanner s = new Scanner(System.in);
 
-    public void selectMenu(){
+    public int selectMenu(){
         System.out.println("*** 영단어 마스터 ***");
         System.out.println("********************");
         System.out.print("1. 모든 단어 보기\n"
@@ -14,13 +14,17 @@ public class WordManager {
                 + "6. 단어 삭제\n"
                 + "7. 파일 저장\n"
                 + "0. 나가기\n");
-
-        int menu = s.nextInt();
-
-
-
+        System.out.println("********************");
+        System.out.print("=> 원하는 메뉴는? ");
+        return s.nextInt();
     }
     public void start() {
-        selectMenu();
+        while(true) {
+            int menu = selectMenu();
+            System.out.println(menu);
+            if(menu == 0) break;
+            if(menu == 4){} //추가
+            else if(menu == 1){} //목록
+        }
     }
 }
