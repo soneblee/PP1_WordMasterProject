@@ -2,7 +2,10 @@ package org.example;
 import java.util.Scanner;
 public class WordManager {
     Scanner s = new Scanner(System.in);
-
+    WordCRUD wordCRUD;
+    WordManager(){
+        wordCRUD = new WordCRUD(s);
+    }
     public int selectMenu(){
         System.out.println("*** 영단어 마스터 ***");
         System.out.println("********************");
@@ -23,7 +26,9 @@ public class WordManager {
             int menu = selectMenu();
             System.out.println(menu);
             if(menu == 0) break;
-            if(menu == 4){} //추가
+            if(menu == 4){
+                wordCRUD.addWord();
+            } //추가
             else if(menu == 1){} //목록
         }
     }
