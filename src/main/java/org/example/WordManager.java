@@ -25,11 +25,13 @@ public class WordManager {
         while(true) {
             int menu = selectMenu();
             System.out.println(menu);
-            if(menu == 0) break;
+            if(menu == 0) {System.out.print("프로그램 종료! 다음에 만나요~"); break;}
             if(menu == 4){
                 wordCRUD.addWord();
             } //추가
-            else if(menu == 1){} //목록
+            else if(menu == 1){
+                wordCRUD.listAll();
+            } //목록
         }
     }
 }
