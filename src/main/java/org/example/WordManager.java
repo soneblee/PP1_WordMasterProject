@@ -28,10 +28,17 @@ public class WordManager {
             if(menu == 0) {System.out.print("프로그램 종료! 다음에 만나요~"); break;}
             if(menu == 4){
                 wordCRUD.addWord();
-            } //추가
-            else if(menu == 1){
+            }
+            else if(menu == 1) {
                 wordCRUD.listAll();
-            } //목록
+            }
+            else if(menu == 5) {
+
+            }
+            else if(menu == 6) {
+            }
+            else if(menu == 7) {
+            }
         }
     }
 }
