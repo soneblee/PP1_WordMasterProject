@@ -75,7 +75,7 @@ public class WordCRUD implements ICRUD{
         String ans = s.next();
         if (ans.equalsIgnoreCase("y")){
             list.remove((int)idlist.get(id-1));
-            System.out.println("단어가 삭제되었습니다. ");
+            System.out.println("선택한 단어 삭제 완료 !!! ");
         } else
             System.out.println("취소되었습니다. ");
     }
@@ -86,7 +86,7 @@ public class WordCRUD implements ICRUD{
                 pr.write(one.toFileString() + "\n");
             }
             pr.close();
-            System.out.println("==> 데이터 저장 완료!!!");
+            System.out.println("=> 모든 단어 파일 저장 완료 !!!");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -108,7 +108,7 @@ public class WordCRUD implements ICRUD{
                 count ++;
             }
             br.close();
-            System.out.println("==> " + count + "개 로딩 완료!!!");
+            System.out.println("=> " + count + "개 로딩 완료!");
             
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
@@ -128,7 +128,7 @@ public class WordCRUD implements ICRUD{
         String meaning = s.nextLine();
         Word word = list.get(idlist.get(id-1));
         word.setMeaning(meaning);
-        System.out.print("단어가 수정되었습니다.");
+        System.out.println("단어 수정이 성공적으로 되었습니다!! ");
     }
     public ArrayList<Integer> listAll(String keyword){
 
@@ -154,7 +154,7 @@ public class WordCRUD implements ICRUD{
     }
 
     public void searchWord() {
-        System.out.print("=> 원하는 단어는? ");
+        System.out.print("=> 검색할 단어 입력: ");
         String keyword = s.next();
         listAll(keyword);
     }
