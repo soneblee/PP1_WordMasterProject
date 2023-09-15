@@ -22,20 +22,30 @@ public class WordManager {
         return s.nextInt();
     }
     public void start() {
+
+        wordCRUD.loadFile();
+
         while(true) {
             int menu = selectMenu();
             System.out.println(menu);
-            if(menu == 0) {System.out.print("프로그램 종료! 다음에 만나요~"); break;}
+            if(menu == 0) {
+                System.out.print("프로그램 종료! 다음에 만나요~");
+                break;
+            }
             if(menu == 4){
                 wordCRUD.addWord();
             }
             else if(menu == 1) {
                 wordCRUD.listAll();
             }
-            else if(menu == 5) {
+            else if(menu == 2){
 
             }
+            else if(menu == 5) {
+                wordCRUD.updateItem();
+            }
             else if(menu == 6) {
+                wordCRUD.deleteWord();
             }
             else if(menu == 7) {
             }
