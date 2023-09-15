@@ -15,7 +15,9 @@ public class Word {
 
         return str;
     }
-
+    public String toFileString() {
+        return this.level + "|" + this.word + "|" + this.meaning;
+    }
     Word(int id, int level, String word, String meaning){
         this.id = id;
         this.level = level;
